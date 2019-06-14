@@ -13,7 +13,7 @@ func main() {
 	fmt.Println("arch:", hostInfo.Architecture)
 	fmt.Println("boot time:", hostInfo.BootTime)
 	if hostInfo.Containerized != nil {
-		fmt.Println("containerized:", hostInfo.Containerized)
+		fmt.Println("containerized:", *hostInfo.Containerized)
 	}
 	fmt.Println("hostname:", hostInfo.Hostname)
 	fmt.Println("ips:")
