@@ -12,7 +12,9 @@ func main() {
 	hostInfo := host.Info()
 	fmt.Println("arch:", hostInfo.Architecture)
 	fmt.Println("boot time:", hostInfo.BootTime)
-	fmt.Println("containerized:", hostInfo.Containerized)
+	if hostInfo.Containerized != nil {
+		fmt.Println("containerized:", hostInfo.Containerized)
+	}
 	fmt.Println("hostname:", hostInfo.Hostname)
 	fmt.Println("ips:")
 	for _, ip := range hostInfo.IPs {
