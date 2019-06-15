@@ -1,11 +1,11 @@
 build:
-	go build -ldflags "-s -w"
+	go build -ldflags "-s -w" -mod=vendor
 
 run:
-	go run main.go
+	go run main.go -mod=vendor
 
 clean:
-	go clean
+	go clean -mod=vendor
 
 check:
 	go fmt
