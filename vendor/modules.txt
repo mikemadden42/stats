@@ -1,22 +1,24 @@
-# github.com/elastic/go-sysinfo v1.0.1
+# github.com/elastic/go-sysinfo v1.3.0
 github.com/elastic/go-sysinfo
 github.com/elastic/go-sysinfo/internal/registry
 github.com/elastic/go-sysinfo/providers/darwin
 github.com/elastic/go-sysinfo/providers/linux
+github.com/elastic/go-sysinfo/providers/shared
 github.com/elastic/go-sysinfo/providers/windows
 github.com/elastic/go-sysinfo/types
-github.com/elastic/go-sysinfo/providers/shared
-# github.com/elastic/go-windows v1.0.0
+# github.com/elastic/go-windows v1.0.1
 github.com/elastic/go-windows
 # github.com/joeshaw/multierror v0.0.0-20140124173710-69b34d4ec901
 github.com/joeshaw/multierror
-# github.com/pkg/errors v0.8.1
+# github.com/pkg/errors v0.9.1
 github.com/pkg/errors
-# github.com/prometheus/procfs v0.0.2
+# github.com/prometheus/procfs v0.0.11
 github.com/prometheus/procfs
 github.com/prometheus/procfs/internal/fs
-# golang.org/x/sys v0.0.0-20190614160838-b47fdc937951
+github.com/prometheus/procfs/internal/util
+# golang.org/x/sys v0.0.0-20200409092240-59c9f1ba88fa
+golang.org/x/sys/unix
 golang.org/x/sys/windows
 golang.org/x/sys/windows/registry
-# howett.net/plist v0.0.0-20181124034731-591f970eefbb
+# howett.net/plist v0.0.0-20200225050739-77e249a2e2ba
 howett.net/plist
