@@ -1,4 +1,4 @@
-module stats
+module github.com/mikemadden42/stats
 
 go 1.12
 
