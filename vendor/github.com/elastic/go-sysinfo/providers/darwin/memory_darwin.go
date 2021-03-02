@@ -15,21 +15,21 @@
 // specific language governing permissions and limitations
 // under the License.
 
+// +build amd64,cgo arm64,cgo
+
 package darwin
 
 import (
-	"syscall"
-
 	"github.com/pkg/errors"
 )
 
-const hardwareMIB = "hw.machine"
+const hwMemsizeMIB = "hw.memsize"
 
-func Architecture() (string, error) {
-	arch, err := syscall.Sysctl(hardwareMIB)
-	if err != nil {
-		return "", errors.Wrap(err, "failed to get architecture")
+func MemTotal() (uint64, error) {
+	var size uint64
+	if err := sysctlByName(hwMemsizeMIB, &size); err != nil {
+		return 0, errors.Wrap(err, "failed to get mem total")
 	}
 
-	return arch, nil
+	return size, nil
 }

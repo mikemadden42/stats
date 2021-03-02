@@ -15,25 +15,23 @@
 // specific language governing permissions and limitations
 // under the License.
 
-// +build darwin,amd64,cgo
+// +build amd64,cgo arm64,cgo
 
 package darwin
 
 import (
 	"syscall"
-	"time"
 
 	"github.com/pkg/errors"
 )
 
-const kernBoottimeMIB = "kern.boottime"
+const hardwareMIB = "hw.machine"
 
-func BootTime() (time.Time, error) {
-	var tv syscall.Timeval
-	if err := sysctlByName(kernBoottimeMIB, &tv); err != nil {
-		return time.Time{}, errors.Wrap(err, "failed to get host uptime")
+func Architecture() (string, error) {
+	arch, err := syscall.Sysctl(hardwareMIB)
+	if err != nil {
+		return "", errors.Wrap(err, "failed to get architecture")
 	}
 
-	bootTime := time.Unix(int64(tv.Sec), int64(tv.Usec)*int64(time.Microsecond))
-	return bootTime, nil
+	return arch, nil
 }
