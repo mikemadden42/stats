@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 
+	"github.com/dustin/go-humanize"
+
 	"github.com/elastic/go-sysinfo"
 )
 
@@ -34,13 +36,13 @@ func main() {
 
 	memory, err := host.Memory()
 	checkErr(err)
-	fmt.Println("available mem:", memory.Available)
-	fmt.Println("free mem:", memory.Free)
-	fmt.Println("total mem:", memory.Total)
-	fmt.Println("used mem:", memory.Used)
-	fmt.Println("free virt mem:", memory.VirtualFree)
-	fmt.Println("total virt mem:", memory.VirtualTotal)
-	fmt.Println("used virt mem:", memory.VirtualUsed)
+	fmt.Println("available mem:", humanize.Bytes(memory.Available))
+	fmt.Println("free mem:", humanize.Bytes(memory.Free))
+	fmt.Println("total mem:", humanize.Bytes(memory.Total))
+	fmt.Println("used mem:", humanize.Bytes(memory.Used))
+	fmt.Println("free virt mem:", humanize.Bytes(memory.VirtualFree))
+	fmt.Println("total virt mem:", humanize.Bytes(memory.VirtualTotal))
+	fmt.Println("used virt mem:", humanize.Bytes(memory.VirtualUsed))
 	fmt.Println()
 
 	goInfo := sysinfo.Go()
