@@ -13,7 +13,7 @@ func main() {
 	checkErr(err)
 	hostInfo := host.Info()
 	fmt.Println("arch:", hostInfo.Architecture)
-	fmt.Println("boot time:", hostInfo.BootTime)
+	fmt.Println("boot time:", humanize.Time(hostInfo.BootTime))
 	if hostInfo.Containerized != nil {
 		fmt.Println("containerized:", *hostInfo.Containerized)
 	}
