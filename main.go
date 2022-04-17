@@ -40,9 +40,9 @@ func main() {
 	fmt.Println("free mem:", humanize.Bytes(memory.Free))
 	fmt.Println("total mem:", humanize.Bytes(memory.Total))
 	fmt.Println("used mem:", humanize.Bytes(memory.Used))
-	fmt.Println("free virt mem:", humanize.Bytes(memory.VirtualFree))
-	fmt.Println("total virt mem:", humanize.Bytes(memory.VirtualTotal))
-	fmt.Println("used virt mem:", humanize.Bytes(memory.VirtualUsed))
+	fmt.Println("free virtual mem:", humanize.Bytes(memory.VirtualFree))
+	fmt.Println("total virtual mem:", humanize.Bytes(memory.VirtualTotal))
+	fmt.Println("used virtual mem:", humanize.Bytes(memory.VirtualUsed))
 	fmt.Println()
 
 	goInfo := sysinfo.Go()
