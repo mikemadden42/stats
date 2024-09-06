@@ -4,7 +4,7 @@ go 1.21
 
 require (
 	github.com/dustin/go-humanize v1.0.1
-	github.com/elastic/go-sysinfo v1.14.0
+	github.com/elastic/go-sysinfo v1.14.1
 )
 
 require (
