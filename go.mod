@@ -1,10 +1,10 @@
 module github.com/mikemadden42/stats
 
-go 1.21
+go 1.23
 
 require (
 	github.com/dustin/go-humanize v1.0.1
-	github.com/elastic/go-sysinfo v1.15.3
+	github.com/elastic/go-sysinfo v1.15.4
 )
 
 require (
