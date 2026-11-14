@@ -32,14 +32,14 @@
 
 - [x] Add a `golangci/golangci-lint-action` step
 - [x] Target `oldstable` and `stable` in the build matrix
-- [ ] Add a `go run .` smoke-test step
+- [x] Add a `go run .` smoke-test step
 
 ## Dependencies
 
-- [ ] Update deps (`go get -u ./... && go mod tidy`): `go-sysinfo` v1.15.5, `go-humanize` v1.1.0, `golang.org/x/sys` v0.25.0 → v0.50.0 (indirect)
+- [x] Update deps (`go get -u ./... && go mod tidy`): `go-sysinfo` v1.15.5, `go-humanize` v1.1.0, `golang.org/x/sys` v0.25.0 → v0.50.0 (indirect)
 
 ## Housekeeping
 
-- [ ] Delete `update_go.log` or add it to `.gitignore`
-- [ ] Expand the README with sample output and install/run instructions
-- [ ] Note that the output includes the machine's unique ID (`id:`), so be careful pasting it publicly
+- [x] Delete `update_go.log` or add it to `.gitignore`
+- [x] Expand the README with sample output and install/run instructions
+- [x] Note that the output includes the machine's unique ID (`id:`), so be careful pasting it publicly
