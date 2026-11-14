@@ -2,12 +2,12 @@
 
 ## Bugs and misleading output
 
-- [ ] **Memory sizes are in base-1000 units.** `humanize.Bytes` (`main.go:39-45`) uses powers of 1000, so a 24 GiB machine shows `total mem: 26 GB`. Switch to `humanize.IBytes`.
-- [ ] **Virtual memory lines show `0 B` on macOS.** go-sysinfo doesn't fill in `VirtualFree/Total/Used` there. Print them only when `VirtualTotal > 0`.
-- [ ] **Uptime prints to the microsecond** (e.g. `72h6m11.983006s`). Use `hostInfo.Uptime().Truncate(time.Second)`.
-- [ ] **MAC and IP lists repeat entries.** macOS hides real MACs, so `02:00:00:00:00:00` appears many times, and some IPs are duplicated. Remove duplicates and skip all-zero/placeholder MACs.
-- [ ] **Extra space in list items.** `fmt.Println("\t", ip)` adds a space after the tab. Use `fmt.Printf("\t%s\n", ip)`.
-- [ ] **Errors panic.** `checkErr` panics with a stack trace. Use `log.Fatal(err)` (or stderr + `os.Exit(1)`), and make a failing `host.Memory()` non-fatal so the Go info still prints.
+- [x] **Memory sizes are in base-1000 units.** `humanize.Bytes` (`main.go:39-45`) uses powers of 1000, so a 24 GiB machine shows `total mem: 26 GB`. Switch to `humanize.IBytes`.
+- [x] **Virtual memory lines show `0 B` on macOS.** go-sysinfo doesn't fill in `VirtualFree/Total/Used` there. Print them only when `VirtualTotal > 0`.
+- [x] **Uptime prints to the microsecond** (e.g. `72h6m11.983006s`). Use `hostInfo.Uptime().Truncate(time.Second)`.
+- [x] **MAC and IP lists repeat entries.** macOS hides real MACs, so `02:00:00:00:00:00` appears many times, and some IPs are duplicated. Remove duplicates and skip all-zero/placeholder MACs.
+- [x] **Extra space in list items.** `fmt.Println("\t", ip)` adds a space after the tab. Use `fmt.Printf("\t%s\n", ip)`.
+- [x] **Errors panic.** `checkErr` panics with a stack trace. Use `log.Fatal(err)` (or stderr + `os.Exit(1)`), and make a failing `host.Memory()` non-fatal so the Go info still prints.
 
 ## Lint config (`.golangci.yml`) is invalid for golangci-lint v2
 
