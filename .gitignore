@@ -11,3 +11,6 @@ stats
 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
+
+# GoReleaser output
+dist/
