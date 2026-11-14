@@ -1,3 +1,4 @@
+// Package main displays operating system stats.
 package main
 
 import (
